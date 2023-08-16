@@ -5,3 +5,7 @@
 fakat bu IP adresleri yalnizca rakamlardan olustugu icin akilda kalmasi acisindan Domain aliriz ( metinsel adresler). bu domaine istek atariz yani ilgili sunucuya. Bu sunucuyu evde de olusturabiliriz fakat
 elektrik gitmesi durumu veya bakim durumlari gibi kisimlarda evde sunucu olusturmak maliyetli olacagi icin Hosting hizmeti veren sirketlere bir miktar odeme yaparak 7/24 bu web sitesinin aktif olmasini saglariz
 sunucuya yapilan istek server tarafindan incelenir ve gelen requeste karsilik responce iletir. Bu responcenin icerisinde result vardir yani userin bir islem yapmasina karsilik karsisina cikan sayfadir .*/
+// HTTP Protokolu -> client ile server arasindaki iletisimi saglayan protokoldur
+// Http fonksiyonlari 9 adettir fakat en cok kullandiklarimiz get , post , put , delete dir .
+// bazi sunucu turleri IIS , APACHE , KESTREL(asp.net ile calisabiliyor) , Nginx
+// Backend(Server Side) -> algoritmik ve mimarisel kodlarin yazildigi alandir , veritabani islemleri backend de gerceklestirilir ,verinin / bilginin uretildigi yerdir 
