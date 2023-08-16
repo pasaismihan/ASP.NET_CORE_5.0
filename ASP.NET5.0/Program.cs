@@ -8,4 +8,5 @@ sunucuya yapilan istek server tarafindan incelenir ve gelen requeste karsilik re
 // HTTP Protokolu -> client ile server arasindaki iletisimi saglayan protokoldur
 // Http fonksiyonlari 9 adettir fakat en cok kullandiklarimiz get , post , put , delete dir .
 // bazi sunucu turleri IIS , APACHE , KESTREL(asp.net ile calisabiliyor) , Nginx
-// Backend(Server Side) -> algoritmik ve mimarisel kodlarin yazildigi alandir , veritabani islemleri backend de gerceklestirilir ,verinin / bilginin uretildigi yerdir 
+// Backend(Server Side) -> algoritmik ve mimarisel kodlarin yazildigi alandir , veritabani islemleri backend de gerceklestirilir ,verinin / bilginin uretildigi yerdir
+// MVC Yaklasimi --> Model-View-Controller kelimelerinin birlesimidir . MVC patternini kullanan bir yaklasimdir . dizayn patterndir 
