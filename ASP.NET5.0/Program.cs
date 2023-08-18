@@ -10,7 +10,7 @@ sunucuya yapilan istek server tarafindan incelenir ve gelen requeste karsilik re
 // bazi sunucu turleri IIS , APACHE , KESTREL(asp.net ile calisabiliyor) , Nginx
 // Backend(Server Side) -> algoritmik ve mimarisel kodlarin yazildigi alandir , veritabani islemleri backend de gerceklestirilir ,verinin / bilginin uretildigi yerdir.
 // MVC Yaklasimi --> Model-View-Controller kelimelerinin birlesimidir . MVC patternini kullanan bir yaklasimdir . dizayn patterndir.
-/* MVC TEORIK ISLEYISI VE MVC PIPELINE 
+/* MVC GIRIS 
     - MVC birbirinden bagimsiz 3 katmani ele alan architectural patterndir .
     - Ozunde Observer , Decorator gibi design patternlari kullanan bir mimarisel desendir
     - Microsoft bu desen uzerine oturtulmus ASP.NET CORE MVC mimarisini gelistirmistir
@@ -22,6 +22,11 @@ MVC KATMANLARI
 istenilen veriyi uretmekten ve ihtiyac dahilinde uretilen bu veriyi View ile gorsellestirmekten sorumludur. Istek neticesinde elde edilen ve islenen veriyi tekrar clienta response olarak dondurur
 !! Genel isleyis mantigi ise ; client controlllera request gonderir , bu request dogrultusunda controller model katmanindan datayi uretmesini ister ve datayi modelden alir . Ihtiyac dahilinde view a datayi iletir
 iletilen data view da gorsellestirilerek tekrar controllera geri gonderilir daha sonra olusan responceyi controller clienta iletir yani client ile iletisim tamamen controller ile olur
+
+ASP.NET CORE MVC PIPELINE(MVC ISLEYISI)
+Request ---> Kestrel(sunucu) ---> Middleware(eger varsa) ---> Routing(gelen istegin turune bakiyor ve endpointe gore ayiriyor) ---> Controller Initialization(MVC deki C dir, routingin ayirdigi turu ele alir ilgili yere gonderir , classdir)
+Action Method Execution(Contollerin iletmis oldugu gorevi yapan metotdur aksiyon alma kismidir) ---> Result Execution ( olusan metotlardan sonraki tamamlanmis kisimdir eger gerekiyorsa buradan view katmanina gider)
+View Rendering (burada gerekli gorsel islemler yapilir ve hazir olarak tekrar controller a iletilir.  
 
 
 
