@@ -1,0 +1,13 @@
+﻿@* Razor Nedir -> ASP.NET Core MVC mimarisinde .cshtml uzantili dosyalarda html icerisine yazilan c# kodlarinin server tarafindan calistirilmasini saglayan bir teknolojidir   *@
+@* @ Operatoru -> @ operatoru Razor operatorudur *@
+@* Razor ile degisken olusturma -> @{ bu suslu parantezler icerisine bildigimiz c# kodlari yazabiliriz ornek . int a = 5;} *@
+@* Razor ile degisken okuma -> @{ Console.WriteLine(a) } *@
+@* Razor ile parcali scope yapisi -> Razor da birden fazla scope yaptigimizda bunlari derledigimizde tek bir scope olarak karsimiza cikar bu yuzden scope disi degıskenlere ulasabılırız aynı scopedaymıs gıbı  *@
+@* Razor icerisinde html kullanimi -> <div> </div> *@
+@* Razor icerisinde <text> etiketi -> if(true){<text>EVET</text>} else {<text>HAYIR</text>} *@
+@* Razor ile tek satirlik islemler -> yapabiliriz , ayni sekilde sayisal islemler de yapabiliriz fakat bunun icin suslu parantez degil normal parantez kullaniyoruz   *@
+@* Sayisal islemler -> <h3> @(5+3) </h3> *@
+@* Ternary operatoru ->  <h3>  @(33%5 ==3 ? "evet" : "hayir") </h3> seklinde yazabiliriz *@
+@* Kosul yapilari -> Razor operatoru (@) kullanmamiz gerekir kosul yapilarindan hemen once, fakat razor scopu kullanmak zorunda degiliz kosul yapisinin scopu yeterlidir  *@
+@* Donguler -> Razor operatoru (@) kullanmamiz gerekir dongulerden hemen once, fakat razor scopu kullanmak zorunda degiliz dongunun scopu yeterlidir *@
+
