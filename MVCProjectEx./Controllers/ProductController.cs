@@ -12,12 +12,16 @@ namespace MVCProjectEx_.Controllers
 {
     public class ProductController : Controller
     {
+        // Bir action metodu default olarak get turunden http ozelligidir...
+        #region ACTION TURLERI , VIEW YAPILANMASI VE VIEW VERI TASIMA KAPASITESI 
+
+  
         // GET: /<controller>/
-       public IActionResult GetProducts() // Olusturacagimiz view file inin ismi action metodunun adiyla ayni olmalidir 
-      {
-         Products product = new Products(); // product veritabanindan alinan veriyi model de isledik ve controller da bu veriyi istedik ve burada cagirmis olduk , view da oldugu gibi 
-            return View(); // belirtilen view adindaki view dosyasini render eder 
-       }
+        // public IActionResult GetProducts() // Olusturacagimiz view file inin ismi action metodunun adiyla ayni olmalidir 
+        //{
+        //   Products product = new Products(); // product veritabanindan alinan veriyi model de isledik ve controller da bu veriyi istedik ve burada cagirmis olduk , view da oldugu gibi 
+        //      return View(); // belirtilen view adindaki view dosyasini render eder 
+        // }
         // ACTION TURLERI
         #region ViewResult
         //public ViewResult GetProducts()
@@ -130,8 +134,33 @@ namespace MVCProjectEx_.Controllers
         // ilgili actionumuz icerisinde ;
         // return RedirectToActionResult("Index2","Products"); belirttigimizde Index2 icerisindeki verileri tasimis oluruz
         #endregion
+        #endregion
+        #region MODEL BINDING
+        // Model binding kullanim alani su sekilde ortaya cikar , bir user eger sunucuya veri gonderirse(post islemi yaparsa) bu verileri eslestirmek baglamak icin ayni bilgilerin backend de de bulunmasi gerekiyor
+        // ornegin input girmektedir adi , soyadi , yasi . bu input degerlerini girip buttona tikladiktan sonra post gonderdigini varsayalim , backend de hangi birimin adi soyadi vs oldugunu bilemeyiz
+        // o yuzden backend de bir class olustururuz bu classla binding ederiz mesela class adi employee olsun , icerisinde adi , soyadi , yasi degerleri bulunsun , ilgili inputu buraya binding ettigimizde
+        // bu girilen degerlerin bir employee ye bagli oldugunu anlariz bu sekilde employee ile baglariz bu isleme model binding denir
+   
+        public IActionResult GetProduct()
+        {
+            return View();
+        }
+        public IActionResult CreateProduct()
+        {
+            return View();
+            // bu yaptigimiz metod formumuza get istegi atmak icin kullandigimiz metoddur, formdan gelen post istegini yanitlamak icin asagida CreateProduct adinda yeni bir metod olusturuyoruz
+            // cshtml uzantili view dosyamizda forum icerisinde asp-action adini CreateProduct olusturdugumuz icin yine metodu ayni isimde olusturuyoruz
+        }
+        [HttpPost] // asagidaki metodun post isteklerini alabilmesi icin olusturdugumuz http post turu
+        public IActionResult CreateProduct(string txtProductName, string txtQuentity)
+        {
+            // request neticesinde actiona gelen datalarin hepsi ilgili actionun parametreleri tarafindan yakalanir 
+            return View();
+        }
 
 
+
+        #endregion
     }
 }
 
