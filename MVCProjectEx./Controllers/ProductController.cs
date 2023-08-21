@@ -136,30 +136,72 @@ namespace MVCProjectEx_.Controllers
         #endregion
         #endregion
         #region MODEL BINDING
-        // Model binding kullanim alani su sekilde ortaya cikar , bir user eger sunucuya veri gonderirse(post islemi yaparsa) bu verileri eslestirmek baglamak icin ayni bilgilerin backend de de bulunmasi gerekiyor
-        // ornegin input girmektedir adi , soyadi , yasi . bu input degerlerini girip buttona tikladiktan sonra post gonderdigini varsayalim , backend de hangi birimin adi soyadi vs oldugunu bilemeyiz
-        // o yuzden backend de bir class olustururuz bu classla binding ederiz mesela class adi employee olsun , icerisinde adi , soyadi , yasi degerleri bulunsun , ilgili inputu buraya binding ettigimizde
-        // bu girilen degerlerin bir employee ye bagli oldugunu anlariz bu sekilde employee ile baglariz bu isleme model binding denir
-   
+        /* Model binding kullanim alani su sekilde ortaya cikar , bir user eger sunucuya veri gonderirse(post islemi yaparsa) bu verileri eslestirmek baglamak icin ayni bilgilerin backend de de bulunmasi gerekiyor
+        ornegin input girmektedir adi , soyadi , yasi . bu input degerlerini girip buttona tikladiktan sonra post gonderdigini varsayalim , backend de hangi birimin adi soyadi vs oldugunu bilemeyiz
+        o yuzden backend de bir class olustururuz bu classla binding ederiz mesela class adi employee olsun , icerisinde adi , soyadi , yasi degerleri bulunsun , ilgili inputu buraya binding ettigimizde
+        bu girilen degerlerin bir employee ye bagli oldugunu anlariz bu sekilde employee ile baglariz bu isleme model binding denir
+        */
         public IActionResult GetProduct()
         {
             return View();
         }
-        public IActionResult CreateProduct()
+        /*
+        ===>  public IActionResult CreateProduct()
         {
-            return View();
+            // CreateProduct ile post istegi gonderebilmek icin oncesinde onu ekranda okumak istiyoruz bu get istegini yapan metodun gorevi de odur
+            Products product = new Products();
+            return View(product);     //yeni post istegi gonderdigimizde satir olarak bu olusturdugumuz product uzerinden aliriz ilgili datalari. bu propery uzerine yazdirilacagi icin databaseye migrate edilir
             // bu yaptigimiz metod formumuza get istegi atmak icin kullandigimiz metoddur, formdan gelen post istegini yanitlamak icin asagida CreateProduct adinda yeni bir metod olusturuyoruz
             // cshtml uzantili view dosyamizda forum icerisinde asp-action adini CreateProduct olusturdugumuz icin yine metodu ayni isimde olusturuyoruz
         }
         [HttpPost] // asagidaki metodun post isteklerini alabilmesi icin olusturdugumuz http post turu
-        public IActionResult CreateProduct(string txtProductName, string txtQuentity)
+        ===>  public IActionResult CreateProduct(string txtProductName, string txtQuentity)
         {
             // request neticesinde actiona gelen datalarin hepsi ilgili actionun parametreleri tarafindan yakalanir 
             return View();
         }
 
+    // !!! Yukaridaki post islemini yapmak icin kullandigimiz metodda parametreler ile inputlari yakalamak istedik fakat buyuk capli projelerde cok fazla input olacagi icin hepsine ayri ayri parametre yazmak zor olacaktir
+    // bunun icin Products classini (model icerisindeki products class i ) parametre olarak kullaniyoruz cunku olusturdugumuz inputlarin aynisi ilgili model de mevcut , bu durumu kullanarak onu referans aliyoruz
+      ===>  public IActionResult CreateProduct(Products product)
+        {
+            // eger ki inputlarin name attribute isimleri ile Products modelinin property isimleri birebir ortusurse sistem otomatik olarak iki tarafi bind eder yani birbirine baglar 
+            return View();
+        }
+        */
+        #endregion
+        #region FORM UZERINDEN VERI ALMA YONTEMI
+        [HttpPost]
+        public IActionResult CreateProductForm(IFormCollection datas)
+        {
+            var value1 = datas["txtValue1"].ToString();
+            var value2 = datas["txtValue2"].ToString();
+            var value3 = datas["txtValue3"].ToString();
+            return View();
+            // burada yapilan islem , IFormCollection ozel form paketi sayesinde name lerden yakaldik ve parametreyi kullanarak yazdirdik 
+        }
 
-
+        #endregion
+        #region QUERYSTRING UZERINDEN VERI ALMA
+        // QueryString => guvenlik gerektirmeyen bilgilerin url uzerinden tasinmasina denilen yapilanmadir . tanimlama yaparken ilgili url nin sonuna ? koyuyoruz daha sonra query bilgilerimizi giriyoruz
+        [HttpPost]
+        public IActionResult VeriAl(string a)
+        {
+            // a parametresini url de .......?a=5 seklinde ifade edersek bu istegi ilgili action yakalayacaktir. url de birden fazla querystring belirtmek icin aralarina & koymaliyiz
+            var queryString = Request.QueryString; // request yapilan endpointe query string parametresi eklenmis mi eklenmemis mi ona bakiyor boolean deger donuyor
+            var c = Request.Query["c"].ToString();
+            var b = Request.Query["b"].ToString();
+            return View();
+        }
+        #endregion
+        #region ROUTE PARAMETER UZERINDEN VERI ALMA
+        public IActionResult VeriAl2(string a)
+        {
+            var queryString = Request.QueryString; 
+            var c = Request.Query["c"].ToString();
+            var b = Request.Query["b"].ToString();
+            return View();
+        }
         #endregion
     }
 }
