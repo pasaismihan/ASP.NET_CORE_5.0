@@ -1,0 +1,21 @@
+﻿@* TagHelperslar bir classdir ve kutuphanede bulunurlar. htmlhelplerlar yerine gelmistir bunun baslica sebepleri vardir bunlardan birtanesi fonksiyonel programlama zorunlulugu bir digeri kod maliyeti olmasidir*@
+@addTagHelper * ,Microsoft.AspNetCore.Mvc.TagHelpers
+
+<form asp-controller="Product" asp-action="Index" method="post">
+    @*form yapilanmasi taghelperda bu kadardir , hangi controller hangi action oldugunu hangi metod oldugunu acikca gorebiliyoruz*@
+    @*   <input type="text" asp-for="" />
+        <select asp-items="">
+            <option></option>
+        </select>
+    *@
+</form>
+
+<cache> @*cache tagi o anki durumu yakalamak icin kullanilir yani bu ornekte cache icerisindeki sure hep aynidir sayfayi yenilesek bile degismez cunku o ani yakalar , alttaki DateTime.Now ise her yeniledigimizde degisir*@
+    cache : @DateTime.Now
+</cache>
+@DateTime.Now
+
+<img src="~resim/png" asp-append-version="true" /> @*burada yapilmak istenen , biz html taglarimizi yukledigimizde bir degisiklik oldugunda sayfa bunu yenilemez ornegin yukledigimiz fotograf degistiginde
+                                                                     bu durumda asp-append-version devreye girer oradaki farkliligi goz onune alarak ilgili fotografi guncellemeyi saglar *@
+
+<partial name="~Views/Product/Partials/ListPartial.cshtml" /> @*bildigimiz partialrender htmlhelper ozelligi burada da vardir view icerisinde render etmemize yarar ilgili adrese ait viewu*@
