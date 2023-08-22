@@ -170,6 +170,7 @@ namespace MVCProjectEx_.Controllers
         }
         */
         #endregion
+        #region KULLANICIDAN VERI ALMA YONTEMLERI 
         #region FORM UZERINDEN VERI ALMA YONTEMI
         [HttpPost]
         public IActionResult CreateProductForm(IFormCollection datas)
@@ -195,11 +196,57 @@ namespace MVCProjectEx_.Controllers
         }
         #endregion
         #region ROUTE PARAMETER UZERINDEN VERI ALMA
-        public IActionResult VeriAl2(string a)
+        public IActionResult VeriAl2(string id)
         {
-            var queryString = Request.QueryString; 
-            var c = Request.Query["c"].ToString();
-            var b = Request.Query["b"].ToString();
+            // biz tarayiciya ilgili actiondan sonra yalnizca id icin ornegin /3 yazarsak bunu algilar ve id yerine o degeri verir
+            var values = Request.RouteValues; // burada da ilgili degerleri yakalayabiliriz ayni islevi gorur
+            return View();
+        }
+        #endregion
+        #region HEADER UZERINDEN VERI ALMA
+        public IActionResult VeriAl3()
+        {
+            var header = Request.Headers; // en dogru sekilde bu yontemle headers daki verileri cekebiliriz
+            // bunu kullanmak icin postman uygulamasindaki header bolumunden key value kismina ilgili verileri girdigimizde bu metodumuza geliyor veriler
+            return View();
+        }
+        #endregion
+        #region AJAX ILE CLIENT TABANLI VERI ALMA
+        // Ajax ile veri alabilmek icin oncelikle ilgili actionun view bolumunde script olusturmamiz gerekir
+        /*
+         <script src = "https://......"></script>
+        <button id="btnGonder"> Gonder </button>
+
+        <script>
+        $("#btnGonder").click(()=>{
+        $.post("https://localhost:5001/product/verial4",{a : "a data" , b : "b data"}
+        });
+        </script>
+         */
+        public IActionResult VeriAl4(AjaxVeriAl ajaxVeri)
+        {
+
+            // istersek parametre olarak ayri ayri belirtmektense ozel bir class olusturup onun iceirisinde ilgili datalari property seklinde olusturup bu metodda o class ve properyleri kullanabiliriz
+            return View();
+        }
+        public class AjaxVeriAl
+        {
+            public string A { get; set; }
+            public string B { get; set; }
+        }
+
+        #endregion
+        #endregion
+        #region TUPLE NESNE ILE POST ETME VE YAKALAMA
+        public IActionResult CreateProductTuple()
+        {
+            var tuple = (new Products(), new Employee()); // degerler null donmesin diye view a yeni nesneler olusturup iletiyoruz 
+            return View(tuple);
+        }
+        [HttpPost]
+        public IActionResult CreateProductTuple([Bind(Prefix ="item1")]Products product , [Bind(Prefix ="item2")]Employee employee)
+        {
+            // bu metodun parametresinde [Bind(Prefix="item")] kullanmamizin nedeni , ilgili tuple degerlerini yakalayamiyor olusumuz , bu sekilde yaptigimizde view input icerisindeki asp-for degerlerinden yakaliyorz
             return View();
         }
         #endregion

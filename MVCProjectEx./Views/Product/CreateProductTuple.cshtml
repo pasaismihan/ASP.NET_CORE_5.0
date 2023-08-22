@@ -1,0 +1,11 @@
+﻿@addTagHelper * ,Microsoft.AspNetCore.Mvc.TagHelpers
+@model (MVCProjectEx_.Models.Products products , MVCProjectEx_.Models.Employee employee)
+
+<form asp-action="CreateProductTuple" asp-controller="Product" method="post">
+    <input type="text" asp-for="products.ProductName"/>
+    <input type="text" asp-for="employee.EmployeePosition"/>
+    <button>gonder</button>
+</form>
+
+@* Eger ki bind mekanizmasinda tuple turunde bir nesne kullaniyorsak bu tuple nesnenin icerisindeki datalar/degerler/object olusturulup verilmesi gerekir *@
+
