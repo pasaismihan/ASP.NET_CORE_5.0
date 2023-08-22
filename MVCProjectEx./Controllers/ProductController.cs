@@ -250,6 +250,29 @@ namespace MVCProjectEx_.Controllers
             return View();
         }
         #endregion
+        #region KULLANICIDAN GELEN VERILERIN DOGRULANMASI(VALIDATION)
+        public IActionResult CreateProductValidation()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult CreateProductValidation(Products model)
+        {
+            // ModelState ---> Mvc de bir type in data annotationlarinin durumunu check eden ve geriye sonuc donduren bir property dir , yani burada valid mi degil mi bunu bildirecegiz
+            if (!ModelState.IsValid)
+            {
+                // asagidaki viewbag ile hata yakalama eski sistem . bunun yerine view da span olusturup asp-validation-for ozelligini kullaniyoruz
+                // ViewBag.HataMesaj = ModelState.Values.FirstOrDefault(x => x.ValidationState == Microsoft.AspNetCore.Mvc.ModelBinding.ModelValidationState.Invalid).Errors[0].ErrorMessage;
+                // loglama
+                // kullanici bilgilendirme
+                var message = ModelState.ToList(); // propertyleri key value pair seklinde hata mesajlarini veriyor 
+                return View(model);
+            }
+            // eger if blogundan gecerse valid oldugunu ogreniriz ve gerekli islemlere tabi tutariz
+            return View();
+        }
+
+        #endregion
     }
 }
 
