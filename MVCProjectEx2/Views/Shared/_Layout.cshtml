@@ -1,10 +1,15 @@
 ﻿@addTagHelper * , Microsoft.AspNetCore.Mvc.TagHelpers
 
 @* asagidaki yapiyi ornek olarak gosterdik fakat layout mantigi su sekildedir ornegin bir sayfa acildiginda header content footer vardir , biz sayfa icerisinde bir seye tikladigimizda header ve footer
- yerinde kalir yalnizca ilgili content degisir bunu saglayan layout yapilasmasidir. Asp.Net core da layout yapilasmasini saglamak icin degisiklik gosteren kisima @RenderBody() fonksiyonunu yaziyoruz *@
+    yerinde kalir yalnizca ilgili content degisir bunu saglayan layout yapilasmasidir. Asp.Net core da layout yapilasmasini saglamak icin degisiklik gosteren kisima @RenderBody() fonksiyonunu yaziyoruz *@
 @* @RenderBody() --> Layout uzerinde o anki render edilen View un resultunun nereye basilacagini ifade eden fonksiyondur. *@
-<form >
-    <input type="text"/>
-    <input  type="text"/>
+<form>
+    <input type="text" />
+    <input type="text" />
     <button> gonder</button>
 </form>
+
+@* Burayı PartialView olarak ayrilmis sayfalarimizi cagirmak icin kullanabiliriz ornegin header i cagirmak icin
+        @Html.Partial("~/Views/Home/Partials/_HeaderPartial.cshtml"); yazdigimizda ilgili headeri cagirmis oluyoruz boylelikle istedigimiz yerde ayni komutu yazarak tekrar tekrar cagirabiliriz
+        Yukaridaki islemin aynisini @{ Html.RenderPartial("~/Views/Home/Partials/_HeaderPartial.cshtml"); } ile de yapabiliriz
+        <partial name="~/Views/Home/Partials/_HeaderPartial.cshtml" />   bu da 3. bir yontemdir TagHelper ile de ilgili partialimizi cagirabiliyoruz*@

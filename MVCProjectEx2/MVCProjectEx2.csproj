@@ -15,6 +15,7 @@
     <None Remove="Views\Product\" />
     <None Remove="Views\Shared\" />
     <None Remove="Views\Home\" />
+    <None Remove="Views\Home\Partials\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controlers\" />
@@ -23,5 +24,6 @@
     <Folder Include="Views\Product\" />
     <Folder Include="Views\Shared\" />
     <Folder Include="Views\Home\" />
+    <Folder Include="Views\Home\Partials\" />
   </ItemGroup>
 </Project>
