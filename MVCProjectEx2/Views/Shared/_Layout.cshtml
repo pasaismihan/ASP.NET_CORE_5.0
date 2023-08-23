@@ -1,0 +1,10 @@
+﻿@addTagHelper * , Microsoft.AspNetCore.Mvc.TagHelpers
+
+@* asagidaki yapiyi ornek olarak gosterdik fakat layout mantigi su sekildedir ornegin bir sayfa acildiginda header content footer vardir , biz sayfa icerisinde bir seye tikladigimizda header ve footer
+ yerinde kalir yalnizca ilgili content degisir bunu saglayan layout yapilasmasidir. Asp.Net core da layout yapilasmasini saglamak icin degisiklik gosteren kisima @RenderBody() fonksiyonunu yaziyoruz *@
+@* @RenderBody() --> Layout uzerinde o anki render edilen View un resultunun nereye basilacagini ifade eden fonksiyondur. *@
+<form >
+    <input type="text"/>
+    <input  type="text"/>
+    <button> gonder</button>
+</form>
