@@ -26,9 +26,17 @@ iletilen data view da gorsellestirilerek tekrar controllera geri gonderilir daha
 ASP.NET CORE MVC PIPELINE(MVC ISLEYISI)
 Request ---> Kestrel(sunucu) ---> Middleware(eger varsa) ---> Routing(gelen istegin turune bakiyor ve endpointe gore ayiriyor) ---> Controller Initialization(MVC deki C dir, routingin ayirdigi turu ele alir ilgili yere gonderir , classdir)
 Action Method Execution(Contollerin iletmis oldugu gorevi yapan metotdur aksiyon alma kismidir) ---> Result Execution ( olusan metotlardan sonraki tamamlanmis kisimdir eger gerekiyorsa buradan view katmanina gider)
-View Rendering (burada gerekli gorsel islemler yapilir ve hazir olarak tekrar controller a iletilir.  
+View Rendering (burada gerekli gorsel islemler yapilir ve hazir olarak tekrar controller a iletilir.
 
 
+/* wwwroot klasoru ozel bir klasordur harici calismalari yapmamiz icin kullaniriz statik bir klasordur ( ornegin css , jquery , img dosyalari gibi) . bir de bu static klasoru kullanabilmemiz
+ startup icerisindeki middlewarelari yukledigimiz metod da app.UseStaticFiles(); yaziyoruz . */
+
+
+/* Layout dosyasi ozunde bir cshtml dosyasidir, ASPNet Core Mvc uygulamalarinda Layout yapilasmasi Views klasoru altindaki Shared klasoru
+icerisinde "_Layout.cshtml" isminde olusturulur . Evrensel kullanimi genelde boyledir */
+
+// wwwroot Net Core projelerinde static dosyalarin konuldugu yerdir. Ornegin jquery , css vb. sadece bu klasorun altindaki dosyalara istek yapilabilir
 
 
 
