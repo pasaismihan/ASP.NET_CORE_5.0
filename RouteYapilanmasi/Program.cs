@@ -1,7 +1,11 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using RouteYapilanmasi.Constraints;
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.Configure<RouteOptions>(option =>option.ConstraintMap.Add("costum", typeof(CostumConstraint)));
+
 
 var app = builder.Build();
 
