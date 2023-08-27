@@ -18,7 +18,7 @@ public class HomeController : Controller
 
     public HomeController(ILogger<HomeController> logger)
     {
-        _logger = logger;
+        _logger = logger; //
     }
     // [Route("isyapan")] seklinde action uzerinde yazarsak yine controller gibi costumize etmis oluruz ... id ve diger parametreleri de yine suslu parantezle devaminda yazabiliriz
     public IActionResult Index(string id , string x , string y)
