@@ -6,4 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Handler\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Handler\" />
+  </ItemGroup>
 </Project>
