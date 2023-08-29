@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1705.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CostumRouteHandler", "CostumRouteHandler.csproj", "{5061FAE8-A80C-4EEC-ABA3-09950176491C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5061FAE8-A80C-4EEC-ABA3-09950176491C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5061FAE8-A80C-4EEC-ABA3-09950176491C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5061FAE8-A80C-4EEC-ABA3-09950176491C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5061FAE8-A80C-4EEC-ABA3-09950176491C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8039AC21-8523-4659-B144-575D6CD0949F}
+	EndGlobalSection
+EndGlobal
