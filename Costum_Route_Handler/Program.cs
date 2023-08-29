@@ -27,7 +27,7 @@ app.MapControllerRoute(
 app.Map("example-route", async c =>
 {
     // https://www.localhost5001/example-route endpointe gelen herhangi bir istek controllera degil buradaki fonksiyon tarafindan karsilanacaktir
-    // async yapmamizin nedeni bu Map fonksiyonunun configurasyonunda delegate keywordu ile olusan sinif vardir ve bu sinif task middleware i ile calisir, bu taskin responcesini beklemek icin asenkron yapariz
+    // async yapmamizin nedeni bu Map fonksiyonunun configurasyonunda delegate keywordu ile olusan sinif vardir ve bu sinif taskmiddleware i ile calisir, bu taskin responcesini beklemek icin asenkron yapariz
 });
 app.Run();
 
