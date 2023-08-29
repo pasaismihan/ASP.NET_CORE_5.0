@@ -1,4 +1,46 @@
 ﻿<Properties StartupConfiguration="{BACDC190-FBF8-4403-851F-9D01E5E426DE}|https">
-  <MonoDevelop.Ide.ItemProperties.MVCProjectEx2 FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.MVCProjectEx2 FirstBuild="True" PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Shared/_Layout.cshtml">
+    <Files>
+      <File FileName="Startup.cs" Line="25" Column="55" />
+      <File FileName="Program.cs" Line="23" Column="12" />
+      <File FileName="Controlers/HomeController.cs" Line="24" Column="27" />
+      <File FileName="Controlers/ProductController.cs" Line="6" Column="1" />
+      <File FileName="Models/Product.cs" Line="8" Column="39" />
+      <File FileName="Views/Product/GetProduct.cshtml" Line="5" Column="1" />
+      <File FileName="Views/Shared/_Layout.cshtml" Line="15" Column="108" />
+      <File FileName="Views/Home/Index.cshtml" Line="11" Column="1" />
+      <File FileName="Views/Home/Sayfa1.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Home/Sayfa2.cshtml" Line="11" Column="16" />
+      <File FileName="Views/_ViewStart.cshtml" Line="2" Column="1" />
+      <File FileName="Views/_ViewImports.cshtml" Line="4" Column="1" />
+      <File FileName="Views/Home/Partials/_HeaderPartial.cshtml" Line="4" Column="130" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MVCProjectEx2" expanded="True">
+            <Node name="MVCProjectEx2" expanded="True">
+              <Node name="Controlers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True">
+                  <Node name="Partials" expanded="True" />
+                </Node>
+                <Node name="Shared" expanded="True">
+                  <Node name="_Layout.cshtml" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
 </Properties>

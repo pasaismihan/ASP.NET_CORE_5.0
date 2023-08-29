@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -15,7 +16,9 @@ namespace MVCProjectEx
        
            public  void ConfigureServices(IServiceCollection services)
             {
-                services.AddControllersWithViews(); // ASP.NET CORE uygulamasinda MVC mimarisini kullanabilmek icin controllers ve view yapilanmasini services olarak ekledik . 
+            // ASP.NET CORE uygulamasinda MVC mimarisini kullanabilmek icin controllers ve view yapilanmasini services olarak ekledik . 
+            services.AddControllersWithViews().AddFluentValidation(x=>x.RegisterValidatorsFromAssemblyContaining<Startup>());
+            // Fluent Validation kutuphanesini kullanabilmek icin addfluentvalidation yaptik . buradaki callback functionu otomatik olarak ilgili validatorlari gormesi icin yaptik  
             }
            
 
@@ -27,7 +30,7 @@ namespace MVCProjectEx
                     app.UseDeveloperExceptionPage();
                 }
                 app.UseRouting(); // Gelen requestin rotasini belirleyen middleware dir .
-
+            app.UseStaticFiles();
                 app.UseEndpoints(endpoints => // Endpoint ; Yapilan istegin varis noktasi . URL , istek adresi... Bu da routing gibi middleware dir 
                 {
                     //endpoints.MapGet("/", async context =>

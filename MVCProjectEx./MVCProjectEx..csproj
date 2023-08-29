@@ -13,6 +13,13 @@
     <None Remove="Views\Home\" />
     <None Remove="Views\Product\" />
     <None Remove="Models\" />
+    <None Remove="Views\Employee\" />
+    <None Remove="Models\ViewModels\" />
+    <None Remove="Helpers\" />
+    <None Remove="Helpers\UrlHelpers-HtmlHelpers\" />
+    <None Remove="Helpers\TagHelpers\" />
+    <None Remove="Models\ModelMetaDataTypes\" />
+    <None Remove="Models\Validators\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -20,5 +27,22 @@
     <Folder Include="Views\Home\" />
     <Folder Include="Views\Product\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Employee\" />
+    <Folder Include="Models\ViewModels\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Helpers\UrlHelpers-HtmlHelpers\" />
+    <Folder Include="Helpers\TagHelpers\" />
+    <Folder Include="Models\ModelMetaDataTypes\" />
+    <Folder Include="Models\Validators\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Helpers\UrlHelpers-HtmlHelpers\HtmlHelpers.cshtml" />
+    <Content Remove="Helpers\UrlHelpers-HtmlHelpers\UrlHelpers.cshtml" />
+    <Content Remove="Helpers\TagHelpers\TagHelpers.cshtml" />
+    <Content Remove="wwwroot\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
   </ItemGroup>
 </Project>

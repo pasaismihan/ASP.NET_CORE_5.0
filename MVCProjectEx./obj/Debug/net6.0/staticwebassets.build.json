@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "kapNk7C58ocAWkWNRIn33TBwYEfx6rRJ4rgkmSPZbz0=",
+  "Hash": "PxDgfz24a44oP4X+8TyDWhNGdoZLkEAjAV2yLJ15QAM=",
   "Source": "MVCProjectEx.",
   "BasePath": "_content/MVCProjectEx.",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MVCProjectEx./wwwroot",
+      "Source": "MVCProjectEx.",
+      "ContentRoot": "/Users/pasa/ASP.NET_CORE_5.0/MVCProjectEx./wwwroot/",
+      "BasePath": "_content/MVCProjectEx.",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }

@@ -16,6 +16,38 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/pasa/ASP.NET_CORE_5.0/MVCProjectEx.
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/pasa/ASP.NET_CORE_5.0/MVCProjectEx./Helpers/TagHelpers/CostumTagHelper.cshtml]
+build_metadata.AdditionalFiles.TargetPath = SGVscGVycy9UYWdIZWxwZXJzL0Nvc3R1bVRhZ0hlbHBlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pasa/ASP.NET_CORE_5.0/MVCProjectEx./Helpers/TagHelpers/TagHelper.cshtml]
+build_metadata.AdditionalFiles.TargetPath = SGVscGVycy9UYWdIZWxwZXJzL1RhZ0hlbHBlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pasa/ASP.NET_CORE_5.0/MVCProjectEx./Views/Employee/GetEmployeeInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1wbG95ZWUvR2V0RW1wbG95ZWVJbmZvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pasa/ASP.NET_CORE_5.0/MVCProjectEx./Views/Product/CreateProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9DcmVhdGVQcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pasa/ASP.NET_CORE_5.0/MVCProjectEx./Views/Product/CreateProductForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9DcmVhdGVQcm9kdWN0Rm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pasa/ASP.NET_CORE_5.0/MVCProjectEx./Views/Product/CreateProductTuple.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9DcmVhdGVQcm9kdWN0VHVwbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pasa/ASP.NET_CORE_5.0/MVCProjectEx./Views/Product/CreateProductValidation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9DcmVhdGVQcm9kdWN0VmFsaWRhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/pasa/ASP.NET_CORE_5.0/MVCProjectEx./Views/Product/GetProducts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9HZXRQcm9kdWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/pasa/ASP.NET_CORE_5.0/MVCProjectEx./Views/RAZOR.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUkFaT1IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

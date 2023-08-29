@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "8/qRqkaO8rFlR+fwOgT0y97v37SkZd0s0f/Bgz7Z5RZlS3oC98/XjP5V3ZqfuWt3QHJtHf74PqMbR6Rm7hmsiw==",
+  "dgSpecHash": "nCygAMyIqxd+18TpN8VViDS64DAS21Y64U8abBnBPi6DvbH9GAvBs9IyUAg7t6qztXNkvI9StwicP+hVPNwXUg==",
   "success": true,
   "projectFilePath": "/Users/pasa/ASP.NET_CORE_5.0/MVCProjectEx./MVCProjectEx..csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/pasa/.nuget/packages/fluentvalidation/11.5.1/fluentvalidation.11.5.1.nupkg.sha512",
+    "/Users/pasa/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "/Users/pasa/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.5.1/fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
+    "/Users/pasa/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/2.1.0/microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

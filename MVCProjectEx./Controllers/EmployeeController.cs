@@ -32,12 +32,18 @@ namespace MVCProjectEx_.Controllers
                 EmployeeName = "pasa",
                 EmployeePosition = "midior"
             };
+            /*
             EmployeeProduct employeeProduct = new EmployeeProduct
             {
                 Employee = employee,
                 Products = product
-            };
+            }; burada yapilan islem bir ViewModel islemidir . Asagida tuple ile ilgili islemler yer alacak 
+            */
+            var employeeProduct = (employee, product);
             return View(employeeProduct);
+            // burada yapilan islem tuple nesnesi ile view a model verisi gondermektir
+            // View katmaninda asagidaki islemi yapabiliriz
+           
         }
     }
 }

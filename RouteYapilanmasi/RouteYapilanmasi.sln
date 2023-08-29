@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1705.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RouteYapilanmasi", "RouteYapilanmasi.csproj", "{874661D4-CD9F-47BA-AC6B-FA0812622415}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Costum_Route_Handler", "..\Costum_Route_Handler\Costum_Route_Handler.csproj", "{2A74458B-DE28-477E-B49E-E70228AD82EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{874661D4-CD9F-47BA-AC6B-FA0812622415}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{874661D4-CD9F-47BA-AC6B-FA0812622415}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{874661D4-CD9F-47BA-AC6B-FA0812622415}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A74458B-DE28-477E-B49E-E70228AD82EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A74458B-DE28-477E-B49E-E70228AD82EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A74458B-DE28-477E-B49E-E70228AD82EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A74458B-DE28-477E-B49E-E70228AD82EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

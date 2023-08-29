@@ -1,0 +1,17 @@
+﻿
+@addTagHelper * , Microsoft.AspNetCore.Mvc.TagHelpers
+
+@* Bir formu tetikleyebilmek icin en az 1 tane button koymamiz gerekir *@
+
+@model MVCProjectEx_.Models.Products
+@* Yukaridaki @model ile ilgili products modelini viewa bagliyoruz , sonrasinda taghelper yardimiyla asp-for kullanarak ilgili property yi cagiriyoruz, name yerine bunu kullanmamiz karisikligi gidermek icin daha iyidir *@
+<form asp-controller="Product" asp-action="CreateProduct" method="post" >
+    <input type="text" asp-for="ProductName" name="txtProductName" placeholder="Product name" />
+    @*ustteki inputun propertysini htmlhelper da getirmek icin @HtmlTextBoxFor(x=> x.ProductName) yapmamiz yeterlidir , buradaki textbox sonundaki for veya herhangi htmlhelperdaki for binding etmek icindir*@
+    <br />
+    <input type="number" asp-for="Quentity" name="txtQuentity" placeholder="Quentity" />
+    <br />
+    <button>Urun ekle</button>
+</form>
+@* inputlari ilgili actiondaki parametreler araciligi ile yakalamamiz icin name attribute sini kullaniyoruz *@
+@* Bir web uygulamasinda form tetiklendiginde icerisindeki inputlarin degerleri hedef endpointe gonderilir (post olarak gonderilir, oyle belirttigimiz icin) *@
