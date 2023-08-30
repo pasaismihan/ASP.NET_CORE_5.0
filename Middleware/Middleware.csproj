@@ -10,4 +10,12 @@
     <PackageReference Include="Microsoft.AspNetCore.OData" Version="8.2.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Middlewares\" />
+    <None Remove="Extensions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Middlewares\" />
+    <Folder Include="Extensions\" />
+  </ItemGroup>
 </Project>
