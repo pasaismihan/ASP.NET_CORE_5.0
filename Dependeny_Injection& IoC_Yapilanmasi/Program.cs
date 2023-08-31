@@ -1,7 +1,27 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using Dependeny_Injection__IoC_Yapilanmasi.Services;
+using Dependeny_Injection__IoC_Yapilanmasi.Services.Interfaces;
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+// builder.Services.Add(new ServiceDescriptor(typeof(ConsoleLog), new ConsoleLog()));
+// builder.Services.Add(new ServiceDescriptor(typeof(TextLog), new TextLog())); // bu siniflari eger containera Add metodu ile ekliyorsak default olarak Singleton davranisini sergiler .
+
+// Yukarida kullanilan Add parametresi oldukca ugrastiricidir bunun yerine AddSingleton , AddScoped , AddTransient metodlari vardir bunu asagida kullanacagiz
+
+builder.Services.AddSingleton<ConsoleLog>(); // Eger ConsoleLog sinifimizin costructoru parametresiz ise bunu yapabiliriz fakat parametreli ise bu ise yaramaz alttakini kullanmamiz gerekir
+builder.Services.AddSingleton<ConsoleLog>(p=>new ConsoleLog(5)); //parametreli oldugunda bir fonksiyon dondurmemizi istiyor bu yuzden p=> diyerek parametreli yeni bir nesne olusturduk
+builder.Services.AddScoped<ConsoleLog>();
+builder.Services.AddScoped<ConsoleLog>(p => new ConsoleLog(5));
+builder.Services.AddTransient<ConsoleLog>();
+builder.Services.AddTransient<ConsoleLog>(p => new ConsoleLog(5));
+
+builder.Services.AddScoped<Ilog>(p => new TextLog()); // bu sekilde yaptigimizda Ilog interfacesinden kalitim aldigi icin dependency injection uygulamis oluyoruz burada degisiklik yapmak istedigimizde sadece
+                                                                // yeni instance olusturma kisminda new ConsoleLog() diye degistirmemiz yeterli olacaktir , ayni sekilde parametre kullanacak isek onu da belirtebiliriz
+builder.Services.AddScoped<Ilog, ConsoleLog>(); // bu da ustteki ornegin bir farkli kullanim cesididir , tek tek siniflari kullanmak yerine ortak kalitim aldiklari interfaceyi kullanmak cok daha dogrudur
+
+
 
 var app = builder.Build();
 
