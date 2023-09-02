@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using DTO_Yapilari_ViewModel.Business;
 using DTO_Yapilari_ViewModel.Models;
 using DTO_Yapilari_ViewModel.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -12,9 +14,31 @@ namespace DTO_Yapilari_ViewModel.Controllers
 {
     public class PersonelController : Controller
     {
+       public IMapper Mapper { get; }
+        public PersonelController(IMapper mapper){
+            Mapper = mapper;
+        }
         [HttpPost]
         public IActionResult Index(PersonelCreateVM personelCreateVM)
         {
+            #region Implicit Donusturme 
+            Personel personel = personelCreateVM;
+            // veya
+            PersonelCreateVM vM = personel;
+            #endregion
+            #region Explicit Donusturme 
+            Personel p = (Personel)personelCreateVM; // explicit de cast etmemiz gerekiyor ve model bolumunde implicit yazdigimiz yeri explicit diye degistirecegiz
+            PersonelCreateVM p2 = (PersonelCreateVM)p;
+            #endregion
+            #region Reflection Ile Donusturme
+            Personel pp = TypeConversion.Conversion<PersonelCreateVM, Personel>(personelCreateVM);
+            #endregion
+            #region AutoMapper 
+            Personel ppp =   Mapper.Map<Personel>(personelCreateVM);
+            PersonelCreateVM pp2 = Mapper.Map<PersonelCreateVM>(ppp);
+
+            #endregion
+
             return View();
         }
         public IActionResult Listele()

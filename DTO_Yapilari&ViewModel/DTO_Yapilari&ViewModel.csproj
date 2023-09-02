@@ -10,9 +10,17 @@
   <ItemGroup>
     <None Remove="Views\Personel\" />
     <None Remove="Models\ViewModels\" />
+    <None Remove="Business\" />
+    <None Remove="AutoMappers\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Personel\" />
     <Folder Include="Models\ViewModels\" />
+    <Folder Include="Business\" />
+    <Folder Include="AutoMappers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
   </ItemGroup>
 </Project>

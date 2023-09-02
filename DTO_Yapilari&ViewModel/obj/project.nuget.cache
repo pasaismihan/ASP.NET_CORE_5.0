@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "MvOdnQdggVm/wl+TxIPnettnfjzEGnUUz03prHKsWlwHrvZOwC1pyfF6mC4E8aW4jEDiRf4cs+E4OWdnf75/wA==",
+  "dgSpecHash": "7A0U6VuCD5n6XZ2ivcC2xsivFoELrUGCvZEoi1aBGZGCdBOXaFj8m9gSzTplLScQ1Y5IrSZpxo8KshJk7tbg/w==",
   "success": true,
   "projectFilePath": "/Users/pasa/ASP.NET_CORE_5.0/DTO_Yapilari&ViewModel/DTO_Yapilari&ViewModel.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/pasa/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/Users/pasa/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "/Users/pasa/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
+    "/Users/pasa/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "/Users/pasa/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "/Users/pasa/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "/Users/pasa/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
