@@ -10,7 +10,7 @@ namespace DTO_Yapilari_ViewModel.AutoMappers
 		public PersonelProfil()
 		{
 			CreateMap<Personel, PersonelCreateVM>();
-			CreateMap<PersonelCreateVM, Personel>();
+			CreateMap<PersonelCreateVM, Personel>(); 
 		}
 	}
 }
