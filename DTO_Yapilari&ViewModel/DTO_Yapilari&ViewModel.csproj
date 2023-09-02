@@ -7,4 +7,12 @@
     <RootNamespace>DTO_Yapilari_ViewModel</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Views\Personel\" />
+    <None Remove="Models\ViewModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Personel\" />
+    <Folder Include="Models\ViewModels\" />
+  </ItemGroup>
 </Project>
